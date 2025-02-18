@@ -5,7 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Stack from "@mui/material/Stack";
 import { Attacks } from "./Attacks";
 import { Evolutions } from "./Evolutions";
-import type { Pokemon} from "./types";
+import type { Pokemon } from "./types";
 
 type PokemonProps = {
   pokemon: Pokemon;
@@ -24,7 +24,11 @@ export function Pokemon({ pokemon }: PokemonProps) {
           />
         }
       />
-      <CardMedia sx={{ p: 5 }} component="img" image={pokemon.image} />
+      <CardMedia
+        sx={{ p: 5, width: 350 }}
+        component="img"
+        image={pokemon.image}
+      />
       <Attacks attacks={pokemon.attacks} />
       <Evolutions evolutions={pokemon.evolutions} />
     </Card>
